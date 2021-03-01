@@ -1,10 +1,10 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     // interface'ler new'lenemez.
     // kısıtlama getirdik. ==> tip olarak sadece entities katmanının concrete klasöründeki referansları almalarını sağladık.

@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,24 +58,9 @@ namespace DataAccess.Concrete.InMemory
             Console.WriteLine("Araba sistemden silindi.");
         }
 
-        public Car Get(Expression<Func<Car, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Car> GetAll()
         {
             return _cars;
-        }
-
-        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Car> GetById(int brandId)
-        {
-            return _cars.Where(c => c.BrandId == brandId).ToList();
         }
 
         public void Update(Car car)
@@ -86,6 +72,26 @@ namespace DataAccess.Concrete.InMemory
             carToUpdate.ModelYear = car.ModelYear;
             carToUpdate.Descriptions = car.Descriptions;
             Console.WriteLine("Sistemde araba bilgileri güncellendi.");
+        }
+
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetById(int BrandId)
+        {
+            return _cars.Where(c => c.BrandId == BrandId).ToList();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,23 +10,9 @@ namespace Business.Concrete
     public class ColorManager : IColorService
     {
         IColorDal _colorDal;
-        public ColorManager(IColorDal colorDal)
+        public ColorManager(IColorDal ColorDal)
         {
-            _colorDal = colorDal;
-        }
-        public void Add(Color color)
-        {
-            _colorDal.Add(color);
-        }
-
-        public void Delete(Color color)
-        {
-            _colorDal.Delete(color);
-        }
-
-        public Color Get(int id)
-        {
-            throw new NotImplementedException();
+            _colorDal = ColorDal;
         }
 
         public List<Color> GetAll()
@@ -34,9 +20,14 @@ namespace Business.Concrete
             return _colorDal.GetAll();
         }
 
-        public void Update(Color color)
+        public Color GetById(int colorId)
         {
-            _colorDal.Update(color);
+            return _colorDal.Get(c => c.ColorId == colorId);
+        }
+
+        List<Color> IColorService.GetById(int colorId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,23 +10,10 @@ namespace Business.Concrete
     public class BrandManager : IBrandService
     {
         IBrandDal _brandDal;
+
         public BrandManager(IBrandDal brandDal)
         {
             _brandDal = brandDal;
-        }
-        public void Add(Brand brand)
-        {
-            _brandDal.Add(brand);
-        }
-
-        public void Delete(Brand brand)
-        {
-            _brandDal.Delete(brand);
-        }
-
-        public Brand Get(int id)
-        {
-            return _brandDal.Get(b => b.BrandId == id);
         }
 
         public List<Brand> GetAll()
@@ -34,9 +21,14 @@ namespace Business.Concrete
             return _brandDal.GetAll();
         }
 
-        public void Update(Brand brand)
+        public Brand GetById(int brandId)
         {
-            _brandDal.Update(brand);
+            return _brandDal.Get(b => b.BrandId == brandId);
+        }
+
+        List<Brand> IBrandService.GetById(int brandId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
