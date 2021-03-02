@@ -58,11 +58,6 @@ namespace DataAccess.Concrete.InMemory
             Console.WriteLine("Araba sistemden silindi.");
         }
 
-        public List<Car> GetAll()
-        {
-            return _cars;
-        }
-
         public void Update(Car car)
         {
             Car carToUpdate = _cars.SingleOrDefault(c => c.CarId == car.CarId);

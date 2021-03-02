@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using Entities.Concrete;
 using System.Text;
+using Core.Utilities.Results.Abstract;
 
 namespace Business.Abstract
 {
     public interface IColorService
     {
-        List<Color> GetAll();
-        List<Color> GetById(int colorId);
+        IDataResult<List<Color>> GetAll();
+        IDataResult<Color> GetById(int colorId);
+        IResult Add(Color color);
+        IResult Update(Color color);
+        IResult Delete(Color color);
     }
 }
