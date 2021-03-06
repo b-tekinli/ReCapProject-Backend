@@ -1,9 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
-using System;
 using System.Collections.Generic;
 using Entities.Concrete;
-using System.Text;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using Business.Constants;

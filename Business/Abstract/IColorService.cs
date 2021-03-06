@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Entities.Concrete;
-using System.Text;
 using Core.Utilities.Results.Abstract;
 
 namespace Business.Abstract

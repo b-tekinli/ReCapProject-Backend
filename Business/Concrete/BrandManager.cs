@@ -5,9 +5,7 @@ using Core.Utilities.Results.Concrete;
 using Core.Utilities.Results.Concrete.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Concrete
 {
