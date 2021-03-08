@@ -1,5 +1,8 @@
 ﻿using Core.Entities;
+using Core.Entities.Abstract;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Entities.DTOs
 {
@@ -14,5 +17,6 @@ namespace Entities.DTOs
         public string ColorName { get; set; }
         public DateTime RentDate { get; set; }
         public DateTime? ReturnDate { get; set; }
+
     }
 }
