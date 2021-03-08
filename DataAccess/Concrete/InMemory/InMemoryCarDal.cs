@@ -65,7 +65,7 @@ namespace DataAccess.Concrete.InMemory
             carToUpdate.DailyPrice = car.DailyPrice;
             carToUpdate.ModelYear = car.ModelYear;
             carToUpdate.Descriptions = car.Descriptions;
-            Console.WriteLine("Sistemde araba bilgileri güncellendi.");
+            Console.WriteLine("Araba bilgileri sistemde güncellendi: " + carToUpdate.Descriptions);
         }
 
         public Car Get(Expression<Func<Car, bool>> filter)
