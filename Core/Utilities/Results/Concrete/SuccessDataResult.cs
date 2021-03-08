@@ -21,7 +21,7 @@ namespace Core.Utilities.Results.Concrete
 
         }
 
-        public SuccessDataResult() : base(default, true)
+        public SuccessDataResult(object accessToken, string accessTokenCreated) : base(default, true)
         {
 
         }

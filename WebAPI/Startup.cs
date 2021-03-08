@@ -5,7 +5,6 @@ using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -58,7 +57,7 @@ namespace WebAPI
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+            var tokenOptions = Configuration.GetSection("TokenOptions").Get<Core.Utilities.Security.JWT.TokenOptions>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

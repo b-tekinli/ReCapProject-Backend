@@ -8,6 +8,7 @@ using Entities.Concrete;
 using Entities.DTOs;
 using System.Collections.Generic;
 using System;
+using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
@@ -35,7 +36,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalList);
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalsListed);
         }
 
         public IDataResult<List<RentalDetailDto>> GetRentalDetailsDto()

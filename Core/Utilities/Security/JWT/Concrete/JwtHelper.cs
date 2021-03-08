@@ -62,5 +62,10 @@ namespace Core.Utilities.Security.JWT.Concrete
 
             return claims;
         }
+
+        public object CreateToken(User user, List<UserOperationClaim> claims)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

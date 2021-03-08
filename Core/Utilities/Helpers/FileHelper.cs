@@ -1,6 +1,5 @@
 ﻿using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
-using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +23,6 @@ namespace Core.Utilities.Helpers
             File.Move(sourcepath, result);
             return result;
         }
-
 
         public static IResult Delete(string path)
         {
@@ -54,7 +52,6 @@ namespace Core.Utilities.Helpers
             File.Delete(sourcePath);
             return result;
         }
-
 
         public static string newPath(IFormFile file)
         {

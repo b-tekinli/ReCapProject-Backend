@@ -6,7 +6,6 @@ using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
-using Core.Utilities.Results.Concrete.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -28,7 +27,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        [SecuredOperation("car.add,admin")]
+        [SecuredOperation("car.add, admin")]
         [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
@@ -36,14 +35,14 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarAdded);
         }
 
-        [SecuredOperation("car.delete,admin")]
+        [SecuredOperation("car.delete, admin")]
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
             return new SuccessResult(Messages.CarDeleted);
         }
 
-        [SecuredOperation("car.update,admin")]
+        [SecuredOperation("car.update, admin")]
         public IResult Update(Car car)
         {
             if (car.DailyPrice <= 0)
@@ -63,7 +62,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarsListed);
         }
 
-        public IDataResult<List<Car>> GetCarByDailyPrice(decimal min, decimal max)
+        public IDataResult<List<Car>> GetAllByDailyPrice(decimal min, decimal max)
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.DailyPrice >= min && c.DailyPrice <= max));
         }
