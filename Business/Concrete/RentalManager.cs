@@ -1,12 +1,13 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
-using Core.Utilities.Results.Concrete.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
 using System.Collections.Generic;
+using System;
 
 namespace Business.Concrete
 {
@@ -19,6 +20,7 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
             _rentalDal.Add(rental);
@@ -33,7 +35,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalsListed);
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.RentalList);
         }
 
         public IDataResult<List<RentalDetailDto>> GetRentalDetailsDto()

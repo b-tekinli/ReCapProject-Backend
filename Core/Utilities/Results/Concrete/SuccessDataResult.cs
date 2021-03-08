@@ -1,4 +1,8 @@
-﻿namespace Core.Utilities.Results.Concrete.Concrete
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Core.Utilities.Results.Concrete
 {
     public class SuccessDataResult<T> : DataResult<T>
     {

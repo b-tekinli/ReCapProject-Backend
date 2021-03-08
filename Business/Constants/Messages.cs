@@ -26,13 +26,21 @@
         public static string UserDeleted = "Kullanıcı silindi.";
         public static string UserUpdated = "Kullanıcı güncellendi.";
         public static string UsersListed = "Kullanıcılar listelendi.";
+        public static string UserRegistered = "Kullanıcı başarıyla kayıt oldu.";
+        public static string UserNotFound = "Kullanıcı bulunamadı.";
 
         public static string RentalAdded = "Kira eklendi.";
-        public static string RentalNameInvalid = "Kira ismi geçersiz.";
+        public static string RentalInvalid = "Kira geçersiz.";
         public static string RentalDeleted = "Kira silindi";
         public static string RentalUpdated = "Kira güncellendi";
         public static string RentalsListed = "Kiralar listelendi.";
 
+        public static string PasswordError = "Parola hatalı. Lütfen tekrar deneyiniz..";
+        public static string SuccessfulLogin = "Giriş başarılı.";
+        public static string UserAlreadyExists = "Kullanıcı sistemde mevcut.";
+
         public static string MaintenanceTime = "Sistem bakımda...";
+        public static string AuthorizationDenied = "Bu işlemi gerçekleştirmek için yetkiniz bulunmamaktadır.";
+        public static string AccessTokenCreated = "Token oluşturuldu.";
     }
 }
