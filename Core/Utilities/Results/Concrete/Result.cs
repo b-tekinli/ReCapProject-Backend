@@ -10,7 +10,6 @@ namespace Core.Utilities.Results.Concrete
         public Result(bool success, string message) : this(success)
         {
             Message = message;
-            //Success = success; this(success) verdik diye bu satıra gerek yok
         }
 
         public Result(bool success)

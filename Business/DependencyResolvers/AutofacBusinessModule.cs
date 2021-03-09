@@ -4,7 +4,6 @@ using Business.Abstract;
 using Business.Concrete;
 using Castle.DynamicProxy;
 using Core.Utilities.Interceptors;
-using Core.Utilities.Security.JWT;
 using Core.Utilities.Security.JWT.Abstract;
 using Core.Utilities.Security.JWT.Concrete;
 using DataAccess.Abstract;
@@ -40,8 +39,10 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
-            //builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
+            builder.RegisterType<CarImageManager>().As<ICarImageService>().SingleInstance();
+            builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
 
+            //builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();

@@ -28,6 +28,7 @@
         public static string UsersListed = "Kullanıcılar listelendi.";
         public static string UserRegistered = "Kullanıcı başarıyla kayıt oldu.";
         public static string UserNotFound = "Kullanıcı bulunamadı.";
+        public static string UserAlreadyExists = "Kullanıcı sistemde mevcut.";
 
         public static string RentalAdded = "Kira eklendi.";
         public static string RentalInvalid = "Kira geçersiz.";
@@ -37,10 +38,9 @@
 
         public static string PasswordError = "Parola hatalı. Lütfen tekrar deneyiniz..";
         public static string SuccessfulLogin = "Giriş başarılı.";
-        public static string UserAlreadyExists = "Kullanıcı sistemde mevcut.";
-
         public static string MaintenanceTime = "Sistem bakımda...";
         public static string AuthorizationDenied = "Bu işlemi gerçekleştirmek için yetkiniz bulunmamaktadır.";
         public static string AccessTokenCreated = "Token oluşturuldu.";
+        public static string FailAddedImageLimit = "Fotoğraf limiti aşıldı.";
     }
 }
