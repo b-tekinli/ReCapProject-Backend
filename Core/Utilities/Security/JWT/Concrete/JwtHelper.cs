@@ -1,16 +1,19 @@
-﻿using Core.Entities.Concrete;
-using Core.Extensions;
-using Core.Utilities.Security.Encryption;
-using Core.Utilities.Security.JWT.Abstract;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
+using Core.Entities.Concrete;
+using Core.Extensions;
+using Core.Utilities.Security.Encryption;
+using Core.Utilities.Security.JWT;
+using Core.Utilities.Security.JWT.Abstract;
+using Core.Utilities.Security.JWT.Concrete;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
-namespace Core.Utilities.Security.JWT.Concrete
+namespace Core.Utilities.Security.Jwt.Concrete
 {
     public class JwtHelper : ITokenHelper
     {
@@ -63,11 +66,6 @@ namespace Core.Utilities.Security.JWT.Concrete
             claims.AddRoles(operationClaims.Select(c => c.Name).ToArray());
 
             return claims;
-        }
-
-        public object CreateToken(User user, List<UserOperationClaim> claims)
-        {
-            throw new NotImplementedException();
         }
     }
 }
