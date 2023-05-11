@@ -106,5 +106,4 @@ Projenin çalışma anına ait ekran görüntüleri  <br> <br>
 ![image](https://user-images.githubusercontent.com/77868230/107650452-8f959480-6c8f-11eb-945f-835c901b1e44.png)
 ![image](https://user-images.githubusercontent.com/77868230/107650516-9de3b080-6c8f-11eb-82b5-99ed1b097dab.png)
 ![image](https://user-images.githubusercontent.com/77868230/107650566-ad62f980-6c8f-11eb-9776-9b10432a06b7.png) 
-## :pencil2:Authors
-* **Ergül Kızılkaya** - [ergulkizilkaya](https://github.com/ergulkizilkaya)
+
